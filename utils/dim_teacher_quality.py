@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 def dim_teacher_quality(file_df: pd.DataFrame) -> pd.DataFrame:
     """
-    transform the teacher quality column from in the dataset to
+    transform the teacher quality column in the dataset to
     match its expected destination
     Args:
         file_df: contaning the content of the dataset
