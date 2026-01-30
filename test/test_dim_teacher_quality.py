@@ -31,13 +31,13 @@ class TestIntigration:
         response = dim_teacher_quality(df)
 
         assert response is None
-        assert "gender column was not found" in caplog.text
+        assert "error while transforming unique teacher quality" in caplog.text
 
         df = pd.DataFrame({})
         response = dim_teacher_quality(df)
 
         assert response is None
-        assert "gender column was not found" in caplog.text
+        assert "error while transforming unique teacher quality" in caplog.text
 
 
     def test_return_unique_values(self, create_df):
