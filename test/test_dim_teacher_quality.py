@@ -12,7 +12,7 @@ def create_df():
     return pd.read_csv(StringIO(csv_data))
 
 
-class TestIntigration:
+class TestUnit:
     def test_handle_wrong_input(self, create_df, caplog):
         response = dim_teacher_quality("hello")
 
