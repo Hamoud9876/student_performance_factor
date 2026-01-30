@@ -36,7 +36,7 @@ def dim_teacher_quality(file_df: pd.DataFrame) -> pd.DataFrame:
         #taking only unique values
         tq_df["teacher_quality"] = copy_df["Teacher_Quality"].unique()
     except Exception as e:
-        logging.error("gender column was not found")
+        logging.error("error while transforming unique teacher quality")
         return None
 
 
