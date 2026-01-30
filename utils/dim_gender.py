@@ -1,14 +1,12 @@
 import pandas as pd
 import logging
+from utils.setup_logging import setup_logging
 
-logging.basicConfig(
-    filename="app.log",
-    level=logging.INFO,
-    format="""%(asctime)s [%(levelname)s] %(name)s 
-    (%(filename)s:%(funcName)s:%(lineno)d): %(message)s""",
-    force=True,
-)
+
 logger = logging.getLogger(__name__)
+
+setup_logging()
+
 
 def dim_gender(file_df: pd.DataFrame) -> pd.DataFrame:
     """
